@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -54,7 +54,7 @@
       <section class="hero">
         <div class="overlay"></div>
         <h1 class="hero-title">Ефективні рішення для <br />вашого бізнесу</h1>
-        <button type="button" class="button">Замовити послугу</button>
+        <button type="button" class="button" data-modal-open>Замовити послугу</button>
       </section>
       <!-- Особливості -->
       <section class="features">
@@ -111,26 +111,35 @@
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list list">
-            <li>
+            <li class="work-item">
               <img
                 src="./images/notepad_with_hands_over_keyboard.jpg"
                 alt="нетбук з руками над клавіатурою"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-text">Десктопні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/notebook_hands_with_phone.jpg"
                 alt="ноутбук та руки з телефоном"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-text">Мобільні додатки</p>
+              </div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./images/hands_holding_a_tablet.jpg"
                 alt="руки тримають планшет"
                 width="370"
               />
+              <div class="work-overlay">
+                <p class="work-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -396,5 +405,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модал -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg width="11" height="11"><use href="./images/icons.svg#close-cross"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
